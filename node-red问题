@@ -1,3 +1,11 @@
+------------------------------Node-red重启-------------------------------------------------
+
+nohup node-red &
+
+exit
+退出命令行港口，不能直接关闭窗口
+
+
 ------------------------------Node-red导入influxdb模块出现的问题----------------------------
  
 npm install --no-audit --no-update-notifier --no-fund --save --save-prefix="~" --timeout=15000 --production node-red-contrib-influxdb@0.4.1
