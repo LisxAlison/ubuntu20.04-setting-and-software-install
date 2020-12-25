@@ -1,0 +1,19 @@
+------------------------------Node-red导入influxdb模块出现的问题----------------------------
+ 
+npm install --no-audit --no-update-notifier --no-fund --save --save-prefix="~" --timeout=15000 --production node-red-contrib-influxdb@0.4.1
+npm ERR! code ERR_INVALID_ARG_TYPE
+npm ERR! errno ERR_INVALID_ARG_TYPE
+npm ERR! request to http://registry.cnpmjs.org/node-red-contrib-influxdb failed, reason: The "msecs" argument must be of type number. Received type string
+
+先进入.node-red目录单独安装
+xxxx@xxxx:~/.node-red$ npm --registry https://registry.npm.taobao.org install node-red-contrib-influxdb
+
+然后去页面重新安装包，
+
+如果出现
+npm ERR! code ERR_TLS_CERT_ALTNAME_INVALID
+npm ERR! errno ERR_TLS_CERT_ALTNAME_INVALID
+npm ERR! request to https://registry.cnpmjs.org/node-red-contrib-influxdb failed, reason: Hostname/IP does not match certificate's altnames: Host: registry.cnpmjs.org. is not in the cert's altnames: DNS:r.cnpmjs.org
+
+则修改registry
+npm config set registry http://registry.npmjs.org
