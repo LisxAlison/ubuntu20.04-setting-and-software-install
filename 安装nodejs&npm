@@ -7,9 +7,9 @@ sudo apt install nodejs npm
 
 设定npm代理
 
-sudo npm config set proxy http://BeaconMeetingAgent:ghost-201802@proxy.sony.com.cn:8080/ --global
+sudo npm config set proxy http://USERNAME:PASSWORD@SERVER:PORT/ --global
 
-sudo npm config set https-proxy http://BeaconMeetingAgent:ghost-201802@proxy.sony.com.cn:8080/ --global
+sudo npm config set https-proxy http://USERNAME:PASSWORD@SERVER:PORT/ --global
 
 sudo npm install -g --unsafe-perm node-red
 
