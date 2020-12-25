@@ -1,0 +1,22 @@
+1 Ubuntu的时间分类
+    1.Ubuntu时钟分为系统时钟（System Clock）和硬件（Real Time Clock，简称RTC）时钟。
+    2.查看系统时间：date -R
+    3.查看硬件时间: sudo hwclock --show
+
+
+2 修改Ubuntu系统时间
+
+    2.1 修改时间
+        1. tzselect  
+        2. 依次选择4->9->1->1 #Asia->China-> Beijing->yes
+    2.2 复制文件到/etc目录下
+    sudo cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
+    2.3 查看修改结果
+    date -R
+
+
+3 修改Ubuntu硬件时间
+
+    sudo date -s MM/DD/YY //修改日期
+    sudo date -s hh:mm:ss //修改时间
+    sudo hwclock --systohc //修改生效
