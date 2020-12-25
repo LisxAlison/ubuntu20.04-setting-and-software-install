@@ -1,0 +1,36 @@
+-------------安装influxdb（以下版本较低，建议安装高版本）-----------
+
+下载：
+wget https://dl.influxdata.com/influxdb/releases/influxdb_1.2.4_amd64.deb
+(可用的版本https://github.com/influxdata/influxdb/releases)
+(在1.3版本之后才支持time按时区查询)
+
+备份还原：
+https://archive.docs.influxdata.com/influxdb/v1.2/administration/backup_and_restore/
+https://cloud.tencent.com/developer/article/1647368
+
+安装
+sudo dpkg -i influxdb_1.2.4_amd64.deb
+
+修改配置文件，启用infludb控制台
+/etc/influxdb/influxdb.conf
+https://blog.csdn.net/qq_41795427/article/details/87648889
+
+运行：nohup sudo influxd run &
+
+
+--------------------安装InfluxDB可视化工具Chronograf---------------------
+参考: 
+https://portal.influxdata.com/downloads/
+https://www.vultr.com/docs/installing-and-configuring-chronograf-on-ubuntu-16-04-lts
+
+wget https://dl.influxdata.com/chronograf/releases/chronograf_1.8.9.1_amd64.deb
+
+sudo dpkg -i chronograf_1.8.9.1_amd64.deb
+
+sudo systemctl enable chronograf
+
+sudo systemctl start chronograf
+
+查询示例：
+SELECT * FROM "database"."autogen"."tablename" limit 20
