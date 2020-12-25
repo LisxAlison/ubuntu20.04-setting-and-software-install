@@ -1,0 +1,16 @@
+ubuntu20.04自带python3，只需安装pip3
+
+sudo apt install python3-pip
+
+
+设置pip仓库
+
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+pip安装包示例：
+
+pip3 install msal
+pip3 install AWSIoTPythonSDK
+Pip3 install paho.mqtt
+pip3 install PySocks
