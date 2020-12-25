@@ -1,0 +1,19 @@
+安装nodejs, npm(先不用更换apt源)
+
+sudo apt update
+
+sudo apt install nodejs npm
+
+
+设定npm代理
+
+sudo npm config set proxy http://USERNAME:PASSWORD@SERVER:PORT/ --global
+
+sudo npm config set https-proxy http://USERNAME:PASSWORD@SERVER:PORT/ --global
+
+sudo npm install -g --unsafe-perm node-red
+
+
+参考：
+https://yq.aliyun.com/articles/760437
+https://blog.csdn.net/yanzi1225627/article/details/80247758
