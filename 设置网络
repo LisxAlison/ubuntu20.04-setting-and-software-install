@@ -1,0 +1,15 @@
+
+配置网络代理，
+(这种方式重启后应该会失效)
+# export http_proxy=http://USERNAME:PASSWORD@SERVER:PORT/
+# export https_proxy=http://USERNAME:PASSWORD@SERVER:PORT/
+
+配置 apt 使用代理
+ubuntu 官方说明 :
+https://help.ubuntu.com/community/AptGet/Howto#Setting_up_apt-get_to_use_a_http-proxy
+
+创建 /etc/apt/apt.conf.d/98https-http-proxy :
+Acquire::http::Proxy "http://USERNAME:PASSWORD@SERVER:PORT/";
+Acquire::https::Proxy "http://USERNAME:PASSWORD@SERVER:PORT/";
+
+
